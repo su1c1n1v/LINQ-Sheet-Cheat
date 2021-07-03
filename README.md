@@ -69,27 +69,34 @@ list = list.OrderBy(Temp => Temp.Job).ToList();
 \\Order Descending the list by job
 list = list.OrderByDescending(Temp => Temp.Job).ToList();
 ```
-![Result](https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img2.png)
-
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img2.png"> 
+</p>
 - Order Descending by Job and Ordered by Name
 ```C#
 \\When we have two or more entities with the same "name" the LINQ will order these two or more by the second OrderBy.
 list = list.OrderByDescending(Temp => Temp.Job).ThenBy(Temp => Temp.Name).ToList();
 ```
-![Result](https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img3.png)
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img3.png"> 
+</p>
 
 ## Where
 ```C#
 \\Where (Users with Id >= 3)
 list = list.Where(Temp => Temp.Id >= 3).ToList();
 ```
-![Result](https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img4.png)
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img4.png"> 
+</p>
 
 ```C#
 \\Search for the id >= 3 and his job is a developer
 list = list.Where(Temp => Temp.Id >= 3 && Temp.Job == Job.Developer).ToList();
 ```
-![Result](https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img5.png)
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img5.png"> 
+</p>
 
 ## Sum
 
@@ -97,13 +104,17 @@ list = list.Where(Temp => Temp.Id >= 3 && Temp.Job == Job.Developer).ToList();
 \\Sum of the IDs of the Users
 int idSum = list.Sum(Temp => Temp.Id);
 ```
-![Result](https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img6.png)
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img6.png"> 
+</p>
 
 ```C#
 \\Sum of the IDs of the Users where the ID >= 3
 idSum = list.Where(Temp => Temp.Id >= 3).Sum(Temp => Temp.Id);
 ```
-![Result](https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img7.png)
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img7.png"> 
+</p>
 
 `
 Credits: Vinícius Costa 
