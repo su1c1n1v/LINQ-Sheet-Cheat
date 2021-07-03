@@ -61,8 +61,9 @@ List<Users> list = new List<Users>()
 //Order the list by Job
 list = list.OrderBy(Temp => Temp.Job).ToList();
 ```
-![Result](https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img1.png)
-
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img1.png"> 
+</p>
 - Order Descending by Job
 ```C#
 \\Order Descending the list by job
