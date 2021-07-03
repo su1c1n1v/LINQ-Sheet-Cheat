@@ -55,7 +55,7 @@ List<Users> list = new List<Users>()
 
 
 - OrderBy Job
-..* We can Order a list with any atrubute of a class;
+    - We can Order a list with any atribute of a class;
 
 ```C#
 //Order the list by Job
@@ -106,7 +106,7 @@ list = list.Where(Temp => Temp.Id >= 3 && Temp.Job == Job.Developer).ToList();
 \\Sum of the IDs of the Users
 int idSum = list.Sum(Temp => Temp.Id);
 ```
-![Alt Text](https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/tree/master/img/img6.png)
+![Alt Text](https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img6.png)
 
 ```C#
 \\Sum of the IDs of the Users where the ID >= 3
