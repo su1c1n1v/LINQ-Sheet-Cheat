@@ -64,6 +64,7 @@ list = list.OrderBy(Temp => Temp.Job).ToList();
 <p align="center">
     <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img1.png"> 
 </p>
+	
 - Order Descending by Job
 ```C#
 \\Order Descending the list by job
@@ -72,20 +73,24 @@ list = list.OrderByDescending(Temp => Temp.Job).ToList();
 <p align="center">
     <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img2.png"> 
 </p>
+	
 - Order Descending by Job and Ordered by Name
 ```C#
 \\When we have two or more entities with the same "name" the LINQ will order these two or more by the second OrderBy.
 list = list.OrderByDescending(Temp => Temp.Job).ThenBy(Temp => Temp.Name).ToList();
 ```
+	
 <p align="center">
     <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img3.png"> 
 </p>
 
 ## Where
+	
 ```C#
 \\Where (Users with Id >= 3)
 list = list.Where(Temp => Temp.Id >= 3).ToList();
 ```
+	
 <p align="center">
     <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img4.png"> 
 </p>
@@ -94,6 +99,7 @@ list = list.Where(Temp => Temp.Id >= 3).ToList();
 \\Search for the id >= 3 and his job is a developer
 list = list.Where(Temp => Temp.Id >= 3 && Temp.Job == Job.Developer).ToList();
 ```
+	
 <p align="center">
     <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img5.png"> 
 </p>
