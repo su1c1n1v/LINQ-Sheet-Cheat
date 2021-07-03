@@ -106,9 +106,7 @@ list = list.Where(Temp => Temp.Id >= 3 && Temp.Job == Job.Developer).ToList();
 \\Sum of the IDs of the Users
 int idSum = list.Sum(Temp => Temp.Id);
 ```
-<img src="~/img/img6.png"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
+![Alt Text](https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/tree/master/img/img6.png)
 
 ```C#
 \\Sum of the IDs of the Users where the ID >= 3
@@ -119,5 +117,5 @@ idSum = list.Where(Temp => Temp.Id >= 3).Sum(Temp => Temp.Id);
      style="float: left; margin-right: 10px;" />
 
 `
-**Credits:** Vinícius Costa 
+Credits: Vinícius Costa 
 `
