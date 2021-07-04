@@ -1,7 +1,7 @@
 ﻿# **LINQ Sheet Cheat**
 
 ### In this project i will show how to work with LINQ
-- To begin i create a class to use as a example and create a List<Users> to use the LINQ
+- To begin i created a class to use as a example and create a List<Users> to use the LINQ
 ---
 
 ## Variables
