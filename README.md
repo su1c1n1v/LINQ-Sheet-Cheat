@@ -51,11 +51,34 @@ List<Users> list = new List<Users>()
 };
 ```
 ---
+## Select
+- We can Select any attribute of the list, array...
+```C#
+//Select the name of the users
+var names = list.Select(Temp => Temp.Name);
+```
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img8.png"> 
+</p>
+
+
+```C#
+//Select more than one attribute
+var namesAndJob = list.Select(Temp => new
+{
+    Temp.Name,
+    Temp.Job
+});
+```
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img9.png"> 
+</p>
+
 ## OrderBy
 
 
 - OrderBy Job
-    - We can Order a list with any atribute of a class;
+    - We can Order a list with any attribute of a class;
 
 ```C#
 //Order the list by Job
@@ -101,7 +124,7 @@ list = list.Where(Temp => Temp.Id >= 3 && Temp.Job == Job.Developer).ToList();
 ```
 	
 <p align="center">
-    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img5.png"> 
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img10.png"> 
 </p>
 
 ## Sum
