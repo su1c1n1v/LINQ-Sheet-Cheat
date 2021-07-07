@@ -124,6 +124,34 @@ namespace StudingLINQ
                 Console.WriteLine();
             }
             Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\n================== Section (Any) ==================");
+            var r = list.Any(Temp => Temp.Id > 3);
+            Console.WriteLine("Any User with Id > 3");
+            Console.WriteLine("Exist some user with Id > 3: " + r);
+            r = list.Any(Temp => Temp.Id > 9);
+            Console.WriteLine("Any User with Id > 9");
+            Console.WriteLine("Exist some user with Id > 9: " + r);
+
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("\n================== Section (All) ==================");
+            r = list.All(Temp => Temp.Name != "hello");
+            Console.WriteLine("Verify if all users match with the condition (name != \"hello\"): " + r);
+            r = list.All(Temp => Temp.Id == 1);
+            Console.WriteLine("Verify if all users match with the condition (Id == \"1\"): " + r);
+
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n================== Section (Contains) ==================");
+            Users usr = list.First(Temp => Temp.Id == 1);
+            r = list.Contains(usr);
+            Console.WriteLine("Return true or false if a specific user it is in the list");
+            Console.WriteLine("This user (" + usr + ") is it in the list: " + r);
+            usr = new Users(10, "example", Job.Youtuber);
+            r = list.Contains(usr);
+            Console.WriteLine("This user (" + usr + ") is it in the list: " + r);
+            /* ===================================================================== */
+            Console.ForegroundColor = ConsoleColor.White;
             Console.ReadKey();
         }
     }

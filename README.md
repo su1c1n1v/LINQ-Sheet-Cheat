@@ -145,6 +145,67 @@ idSum = list.Where(Temp => Temp.Id >= 3).Sum(Temp => Temp.Id);
     <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img7.png"> 
 </p>
 
+## Any
+```C#
+\\Search in the list if there ara at least one user that match the condicion
+\\Any User with Id > 3
+var r = list.Any(Temp => Temp.Id > 3);
+```
+
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img11.png"> 
+</p>
+
+```C#
+\\Exist some user with Id > 9
+r = list.Any(Temp => Temp.Id > 9);
+
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img12.png"> 
+</p>
+```
+## Contains
+
+```C#
+\\Return true or false if a specific user it is in the list
+Users usr = list.First(Temp => Temp.Id == 1);
+r = list.Contains(usr);
+```
+
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img13.png"> 
+</p>
+
+```C#
+usr = new Users(10, "example", Job.Youtuber);
+r = list.Contains(usr);
+```
+
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img14.png"> 
+</p>
+
+## All
+
+```C#
+\\Verify if all users in the list match with a specific condicion
+\\Verify if all users match with the condition (name != hello)
+r = list.All(Temp => Temp.Name != "hello");
+```
+
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img15.png"> 
+</p>
+
+```C#
+\\Verify if all users match with the condition (Id == 1)
+r = list.All(Temp => Temp.Id == 1);
+```
+
+<p align="center">
+    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img16.png"> 
+</p>
+
 `
 Credits: Vinícius Costa 
 `
