@@ -161,7 +161,7 @@ var r = list.Any(Temp => Temp.Id > 3);
 r = list.Any(Temp => Temp.Id > 9);
 ```
 <p align="center">
-    <img width="100%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img12.png"> 
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img12.png"> 
 </p>
 
 ## Contains
@@ -173,7 +173,7 @@ r = list.Contains(usr);
 ```
 
 <p align="center">
-    <img width="100%" height="50px" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img13.png"> 
+    <img width="70%" height="50px" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img13.png"> 
 </p>
 
 ```C#
@@ -182,7 +182,7 @@ r = list.Contains(usr);
 ```
 
 <p align="center">
-    <img width="100%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img14.png"> 
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img14.png"> 
 </p>
 
 ## All
@@ -194,7 +194,7 @@ r = list.All(Temp => Temp.Name != "hello");
 ```
 
 <p align="center">
-    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img15.png"> 
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img15.png"> 
 </p>
 
 ```C#
@@ -203,7 +203,7 @@ r = list.All(Temp => Temp.Id == 1);
 ```
 
 <p align="center">
-    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img16.png"> 
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img16.png"> 
 </p>
 
 `
