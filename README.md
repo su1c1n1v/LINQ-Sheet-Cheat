@@ -159,11 +159,11 @@ var r = list.Any(Temp => Temp.Id > 3);
 ```C#
 \\Exist some user with Id > 9
 r = list.Any(Temp => Temp.Id > 9);
-
-<p align="center">
-    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img12.png"> 
-</p>
 ```
+<p align="center">
+    <img width="100%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img12.png"> 
+</p>
+
 ## Contains
 
 ```C#
@@ -173,7 +173,7 @@ r = list.Contains(usr);
 ```
 
 <p align="center">
-    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img13.png"> 
+    <img width="100%" height="50px" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img13.png"> 
 </p>
 
 ```C#
@@ -182,7 +182,7 @@ r = list.Contains(usr);
 ```
 
 <p align="center">
-    <img width="33%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img14.png"> 
+    <img width="100%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img14.png"> 
 </p>
 
 ## All
