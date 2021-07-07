@@ -128,7 +128,7 @@ list = list.Where(Temp => Temp.Id >= 3 && Temp.Job == Job.Developer).ToList();
 </p>
 
 ## Sum
-
+- Sum a specific collumn and return the result
 ```C#
 \\Sum of the IDs of the Users
 int idSum = list.Sum(Temp => Temp.Id);
@@ -146,8 +146,8 @@ idSum = list.Where(Temp => Temp.Id >= 3).Sum(Temp => Temp.Id);
 </p>
 
 ## Any
+- Search in the list if there ara at least one user that match the condicion
 ```C#
-\\Search in the list if there ara at least one user that match the condicion
 \\Any User with Id > 3
 var r = list.Any(Temp => Temp.Id > 3);
 ```
@@ -165,9 +165,8 @@ r = list.Any(Temp => Temp.Id > 9);
 </p>
 
 ## Contains
-
+- Return true or false if a specific user it is in the list
 ```C#
-\\Return true or false if a specific user it is in the list
 Users usr = list.First(Temp => Temp.Id == 1);
 r = list.Contains(usr);
 ```
@@ -186,9 +185,9 @@ r = list.Contains(usr);
 </p>
 
 ## All
-
+- Verify if all users in the list match with a specific condicion
+	
 ```C#
-\\Verify if all users in the list match with a specific condicion
 \\Verify if all users match with the condition (name != hello)
 r = list.All(Temp => Temp.Name != "hello");
 ```
