@@ -150,7 +150,48 @@ namespace StudingLINQ
             usr = new Users(10, "example", Job.Youtuber);
             r = list.Contains(usr);
             Console.WriteLine("This user (" + usr + ") is it in the list: " + r);
+
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("\n================== Section (Min and Max) ==================");
+            var min = list.Min(Temp => Temp.Id);
+            Console.WriteLine("Return the min value from the select");
+            Console.WriteLine("The min ID found in the list: " + min);
+            var max = list.Max(Temp => Temp.Id);
+            Console.WriteLine("Return the max value from the select");
+            Console.WriteLine("The max ID found in the list: " + max);
+
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("\n================== Section (Distinct) ==================");
+            List<string> distintic = list.Select(Temp => Temp.Name).Distinct().ToList();
+            Console.WriteLine("Return The list of Users with Names distinct");
+            foreach (var item in distintic)
+            {
+                Console.WriteLine("The names distints: " + item);
+            }
+            var distintic2 = list.Select(Temp => Temp.Job).Distinct().ToList();
+            Console.WriteLine("\nReturn The list of Users with jobs distinct");
+            foreach (var item in distintic2)
+            {
+                Console.WriteLine("The jobs distints: " + item);
+            }
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\n================== Section (Take and TakeWhile) ==================");
+            list = list.OrderBy(Temp => Temp.Id).ToList();
+            var take = list.Take(3);
+            Console.WriteLine("Take the quantity of users, if we put list.Take(3) the LINQ will return the first three users.");
+            foreach (var item in take)
+            {
+                Console.WriteLine("User: " + item);
+            }
+            var takeWhile = list.TakeWhile(Temp => Temp.Id < 3);
+            Console.WriteLine("\nThe TakeWhile takes the Users while the condition is \"True\", condition: Temp => Temp.Id < 3: ");
+            foreach (var item in takeWhile)
+            {
+                Console.WriteLine("User: " + item);
+            }
             /* ===================================================================== */
+
             Console.ForegroundColor = ConsoleColor.White;
             Console.ReadKey();
         }

@@ -206,6 +206,58 @@ r = list.All(Temp => Temp.Id == 1);
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img16.png"> 
 </p>
 
+## Min and Max
+
+```C#
+\\Return the min value from the select
+\\The min ID found in the list
+var min = list.Min(Temp => Temp.Id);
+
+\\Return the max value from the select
+\\The max ID found in the list
+var max = list.Max(Temp => Temp.Id);
+```
+
+<p align="center">
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img17.png"> 
+</p>
+
+## Distinct
+
+```C#
+\\Return The list of Users with Names distinct
+List<string> distintic = list.Select(Temp => Temp.Name).Distinct().ToList();
+```
+<p align="center">
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img18.png"> 
+</p>
+
+```C#
+\\Return The list of Users with jobs distinct
+List<Job>  distinticJob = list.Select(Temp => Temp.Job).Distinct().ToList();
+```
+<p align="center">
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img19.png"> 
+</p>
+
+## Take and TakeWhile
+
+```C#
+\\Take the quantity of users, if we put list.Take(3) the LINQ will return the first three users
+var take = list.Take(3);
+```
+<p align="center">
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img20.png"> 
+</p>
+
+```C#
+\\The TakeWhile takes the Users while the condition is \"True\", condition: Temp => Temp.Id < 3
+var takeWhile = list.TakeWhile(Temp => Temp.Id < 3);     
+```
+
+<p align="center">
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img21.png"> 
+</p>
 `
 Credits: Vinícius Costa 
 `
