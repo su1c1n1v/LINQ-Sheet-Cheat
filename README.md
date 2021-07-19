@@ -241,16 +241,21 @@ List<Job>  distinticJob = list.Select(Temp => Temp.Job).Distinct().ToList();
 
 ## Take and TakeWhile
 
+- Take 
+	- Take the quantity of users (or elements in a list)
+	
 ```C#
-\\Take the quantity of users, if we put list.Take(3) the LINQ will return the first three users
+\\if we put list.Take(3) the LINQ will return the first three users
 var take = list.Take(3);
 ```
 <p align="center">
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img20.png"> 
 </p>
-
+	
+- TakeWhile
+	-  The TakeWhile takes the Users while the condition is "True" 
 ```C#
-\\The TakeWhile takes the Users while the condition is \"True\", condition: Temp => Temp.Id < 3
+\\Temp => Temp.Id < 3
 var takeWhile = list.TakeWhile(Temp => Temp.Id < 3);     
 ```
 
