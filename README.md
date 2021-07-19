@@ -206,33 +206,38 @@ r = list.All(Temp => Temp.Id == 1);
 </p>
 
 ## Min and Max
-
+- Min
+	- Min select the min value in a list of elements
 ```C#
-\\Return the min value from the select
 \\The min ID found in the list
 var min = list.Min(Temp => Temp.Id);
-
-\\Return the max value from the select
+```
+	
+- Max
+	- Max select the max value in a list of elements
+	
+```C#
 \\The max ID found in the list
 var max = list.Max(Temp => Temp.Id);
 ```
-
+	
 <p align="center">
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img17.png"> 
 </p>
 
 ## Distinct
 
+- The names distinct
+	- Return The list of Users with Names distinct
 ```C#
-\\Return The list of Users with Names distinct
 List<string> distintic = list.Select(Temp => Temp.Name).Distinct().ToList();
 ```
 <p align="center">
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img18.png"> 
 </p>
-
+	- We can use the distinct with any attribute in a class or element
+	- Return The list of Users with jobs distinct
 ```C#
-\\Return The list of Users with jobs distinct
 List<Job>  distinticJob = list.Select(Temp => Temp.Job).Distinct().ToList();
 ```
 <p align="center">
@@ -263,6 +268,8 @@ var takeWhile = list.TakeWhile(Temp => Temp.Id < 3);
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img21.png"> 
 </p>
 	
+---
 `
 Credits: Vinícius Costa 
 `
+---
