@@ -229,17 +229,22 @@ var max = list.Max(Temp => Temp.Id);
 
 - The names distinct
 	- Return The list of Users with Names distinct
+	
 ```C#
 List<string> distintic = list.Select(Temp => Temp.Name).Distinct().ToList();
 ```
+	
 <p align="center">
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img18.png"> 
 </p>
+	
 	- We can use the distinct with any attribute in a class or element
 	- Return The list of Users with jobs distinct
+	
 ```C#
 List<Job>  distinticJob = list.Select(Temp => Temp.Job).Distinct().ToList();
 ```
+	
 <p align="center">
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img19.png"> 
 </p>
@@ -253,12 +258,14 @@ List<Job>  distinticJob = list.Select(Temp => Temp.Job).Distinct().ToList();
 \\if we put list.Take(3) the LINQ will return the first three users
 var take = list.Take(3);
 ```
+	
 <p align="center">
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img20.png"> 
 </p>
 	
 - TakeWhile
 	-  The TakeWhile takes the Users while the condition is "True" 
+	
 ```C#
 \\Temp => Temp.Id < 3
 var takeWhile = list.TakeWhile(Temp => Temp.Id < 3);     
@@ -268,8 +275,6 @@ var takeWhile = list.TakeWhile(Temp => Temp.Id < 3);
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img21.png"> 
 </p>
 	
----
 `
 Credits: Vinícius Costa 
 `
----
