@@ -296,6 +296,30 @@ last = list.LastOrDefault(Temp => Temp.Name == "hello");
 <p align="center">
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img23.png"> 
 </p>
+
+## SequenceEqual
+
+- SequenceEqual
+    - Return bool, if the seguence is equal return true
+    - Verify if the list in this and the list in the parament is equal
+
+```C#
+// Verify if the same list is equal
+bool sequence = list.SequenceEqual(list);
+```
+
+```C#
+// Verify if the list and the list ordered by name is the same
+sequence = list.SequenceEqual(list.OrderBy(Temp => Temp.Name));
+```
+```C#
+// Verify if the list and the list ordered by Job is the same
+sequence = list.SequenceEqual(list.OrderBy(Temp => Temp.Job));
+```
+<p align="center">
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img24.png"> 
+</p>
+
 `
 Credits: Vinícius Costa 
 `
