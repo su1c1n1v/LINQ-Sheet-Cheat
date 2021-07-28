@@ -90,7 +90,7 @@ list = list.OrderBy(Temp => Temp.Job).ToList();
 	
 - Order Descending by Job
 ```C#
-\\Order Descending the list by job
+//Order Descending the list by job
 list = list.OrderByDescending(Temp => Temp.Job).ToList();
 ```
 <p align="center">
@@ -99,7 +99,7 @@ list = list.OrderByDescending(Temp => Temp.Job).ToList();
 	
 - Order Descending by Job and Ordered by Name
 ```C#
-\\When we have two or more entities with the same "name" the LINQ will order these two or more by the second OrderBy.
+//When we have two or more entities with the same "name" the LINQ will order these two or more by the second OrderBy.
 list = list.OrderByDescending(Temp => Temp.Job).ThenBy(Temp => Temp.Name).ToList();
 ```
 	
@@ -110,7 +110,7 @@ list = list.OrderByDescending(Temp => Temp.Job).ThenBy(Temp => Temp.Name).ToList
 ## Where
 	
 ```C#
-\\Where (Users with Id >= 3)
+//Where (Users with Id >= 3)
 list = list.Where(Temp => Temp.Id >= 3).ToList();
 ```
 	
@@ -119,7 +119,7 @@ list = list.Where(Temp => Temp.Id >= 3).ToList();
 </p>
 
 ```C#
-\\Search for the id >= 3 and his job is a developer
+//Search for the id >= 3 and his job is a developer
 list = list.Where(Temp => Temp.Id >= 3 && Temp.Job == Job.Developer).ToList();
 ```
 	
@@ -130,7 +130,7 @@ list = list.Where(Temp => Temp.Id >= 3 && Temp.Job == Job.Developer).ToList();
 ## Sum
 - Sum a specific collumn and return the result
 ```C#
-\\Sum of the IDs of the Users
+//Sum of the IDs of the Users
 int idSum = list.Sum(Temp => Temp.Id);
 ```
 <p align="center">
@@ -138,7 +138,7 @@ int idSum = list.Sum(Temp => Temp.Id);
 </p>
 
 ```C#
-\\Sum of the IDs of the Users where the ID >= 3
+//Sum of the IDs of the Users where the ID >= 3
 idSum = list.Where(Temp => Temp.Id >= 3).Sum(Temp => Temp.Id);
 ```
 <p align="center">
@@ -148,7 +148,7 @@ idSum = list.Where(Temp => Temp.Id >= 3).Sum(Temp => Temp.Id);
 ## Any
 - Search in the list if there ara at least one user that match the condicion
 ```C#
-\\Any User with Id > 3
+//Any User with Id > 3
 var r = list.Any(Temp => Temp.Id > 3);
 ```
 
@@ -157,7 +157,7 @@ var r = list.Any(Temp => Temp.Id > 3);
 </p>
 
 ```C#
-\\Exist some user with Id > 9
+//Exist some user with Id > 9
 r = list.Any(Temp => Temp.Id > 9);
 ```
 <p align="center">
@@ -188,7 +188,7 @@ r = list.Contains(usr);
 - Verify if all users in the list match with a specific condicion
 	
 ```C#
-\\Verify if all users match with the condition (name != hello)
+//Verify if all users match with the condition (name != hello)
 r = list.All(Temp => Temp.Name != "hello");
 ```
 
@@ -197,7 +197,7 @@ r = list.All(Temp => Temp.Name != "hello");
 </p>
 
 ```C#
-\\Verify if all users match with the condition (Id == 1)
+//Verify if all users match with the condition (Id == 1)
 r = list.All(Temp => Temp.Id == 1);
 ```
 
@@ -209,7 +209,7 @@ r = list.All(Temp => Temp.Id == 1);
 - Min
 	- Min select the min value in a list of elements
 ```C#
-\\The min ID found in the list
+//The min ID found in the list
 var min = list.Min(Temp => Temp.Id);
 ```
 	
@@ -217,7 +217,7 @@ var min = list.Min(Temp => Temp.Id);
 	- Max select the max value in a list of elements
 	
 ```C#
-\\The max ID found in the list
+//The max ID found in the list
 var max = list.Max(Temp => Temp.Id);
 ```
 	
@@ -255,7 +255,7 @@ List<Job>  distinticJob = list.Select(Temp => Temp.Job).Distinct().ToList();
 	- Take the quantity of users (or elements in a list)
 	
 ```C#
-\\if we put list.Take(3) the LINQ will return the first three users
+//if we put list.Take(3) the LINQ will return the first three users
 var take = list.Take(3);
 ```
 	
@@ -267,7 +267,7 @@ var take = list.Take(3);
 	-  The TakeWhile takes the Users while the condition is "True" 
 	
 ```C#
-\\Temp => Temp.Id < 3
+//Temp => Temp.Id < 3
 var takeWhile = list.TakeWhile(Temp => Temp.Id < 3);     
 ```
 
@@ -299,7 +299,7 @@ first = list.FirstOrDefault(Temp => Temp.Name == "hello");
 
 - Last get the last element in the list
 ```C#
-\\Return the last element with any paraments
+//Return the last element with any paraments
  Users last = list.Last();
 ```
 
