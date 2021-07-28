@@ -258,6 +258,25 @@ var takeWhile = list.TakeWhile(Temp => Temp.Id < 3);
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img21.png"> 
 </p>
 
+
+## First and FirstOrDefault
+
+- First get the first element in the list
+```C#
+Users first = list.First();
+Console.WriteLine($"Return the first element in the list: {first}");               
+```
+
+- FirstOrDefault get the first element in the list but if dont fould anything
+return null
+```C#
+first = list.FirstOrDefault(Temp => Temp.Name == "hello");
+Console.WriteLine($"Return the first \"Temp => Temp.Name == \"hello\"\" or null: null");
+              
+```
+<p align="center">
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img22.png"> 
+</p>
 `
 Credits: Vinícius Costa 
 `

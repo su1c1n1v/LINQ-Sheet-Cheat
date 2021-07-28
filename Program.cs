@@ -190,14 +190,14 @@ namespace StudingLINQ
             {
                 Console.WriteLine("User: " + item);
             }
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("\n================== Section (First or FirstOrDefault) ==================");
             Users first = list.First();
             Console.WriteLine($"Return the first element in the list: {first}");
             first = list.First(Temp => Temp.Name == "Rodrigues");
-            Console.WriteLine($"Return the first \"Rodrigues\" in the list: {first}");
+            Console.WriteLine($"Return the first \"Temp => Temp.Name == \"Rodrigues\"\" in the list: {first}");
             first = list.FirstOrDefault(Temp => Temp.Name == "hello");
-            Console.WriteLine($"Return the first \"hello\" or null: null");
+            Console.WriteLine($"Return the first \"Temp => Temp.Name == \"hello\"\" or null: null");
 
             /* ===================================================================== */
 
