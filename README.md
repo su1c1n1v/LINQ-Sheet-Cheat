@@ -257,6 +257,7 @@ var takeWhile = list.TakeWhile(Temp => Temp.Id < 3);
 <p align="center">
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img21.png"> 
 </p>
+
 `
 Credits: Vinícius Costa 
 `
