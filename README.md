@@ -277,6 +277,26 @@ Console.WriteLine($"Return the first \"Temp => Temp.Name == \"hello\"\" or null:
 <p align="center">
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img22.png"> 
 </p>
+
+## Last and LastOrDefault
+
+- Last get the last element in the list
+```C#
+ Users last = list.Last();
+Console.WriteLine($"Return the last element in the list: {last}");
+```
+
+- LastOrDefault get the last element in the list but if dont fould anything
+return null
+
+```C#
+last = list.LastOrDefault(Temp => Temp.Name == "hello");
+Console.WriteLine($"Return the last \"Temp => Temp.Name == \"hello\"\" or null: null");
+             
+```
+<p align="center">
+    <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img23.png"> 
+</p>
 `
 Credits: Vinícius Costa 
 `
