@@ -190,14 +190,23 @@ namespace StudingLINQ
             {
                 Console.WriteLine("User: " + item);
             }
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\n================== Section (First or FirstOrDefault) ==================");
             Users first = list.First();
             Console.WriteLine($"Return the first element in the list: {first}");
-            first = list.First(Temp => Temp.Name == "Rodrigues");
-            Console.WriteLine($"Return the first \"Temp => Temp.Name == \"Rodrigues\"\" in the list: {first}");
+            first = list.First(Temp => Temp.Name == "Vinicius");
+            Console.WriteLine($"Return the first \"Temp => Temp.Name == \"Vinicius\"\" in the list: {first}");
             first = list.FirstOrDefault(Temp => Temp.Name == "hello");
             Console.WriteLine($"Return the first \"Temp => Temp.Name == \"hello\"\" or null: null");
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\n================== Section (Last or LastOrDefault) ==================");
+            Users last = list.Last();
+            Console.WriteLine($"Return the last element in the list: {last}");
+            last = list.Last(Temp => Temp.Name == "Vinicius");
+            Console.WriteLine($"Return the last \"Temp => Temp.Name == \"Vinicius\"\" in the list: {last}");
+            last = list.LastOrDefault(Temp => Temp.Name == "hello");
+            Console.WriteLine($"Return the last \"Temp => Temp.Name == \"hello\"\" or null: null");
 
             /* ===================================================================== */
 
