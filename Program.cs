@@ -200,7 +200,7 @@ namespace StudingLINQ
             Console.WriteLine($"Return the first \"Temp => Temp.Name == \"hello\"\" or null: null");
 
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("\n================== Section (Last or LastOrDefault) ==================");
+            Console.WriteLine("\n================== Section (SequenceEqual) ==================");
             Users last = list.Last();
             Console.WriteLine($"Return the last element in the list: {last}");
             last = list.Last(Temp => Temp.Name == "Vinicius");
@@ -208,6 +208,15 @@ namespace StudingLINQ
             last = list.LastOrDefault(Temp => Temp.Name == "hello");
             Console.WriteLine($"Return the last \"Temp => Temp.Name == \"hello\"\" or null: null");
 
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("\n================== Section (SequenceEqual) ==================");
+            // SequenceEqual return bool, if the seguence is equal return true
+            bool sequence = list.SequenceEqual(list);
+            Console.WriteLine($"Sequence \"list.SequenceEqual(list)\" is equal: {sequence}");
+            sequence = list.SequenceEqual(list.OrderBy(Temp => Temp.Name));
+            Console.WriteLine($"Sequence \"list.SequenceEqual(list.OrderBy(Temp => Temp.Name))\" is equal: {sequence}");
+            sequence = list.SequenceEqual(list.OrderBy(Temp => Temp.Job));
+            Console.WriteLine($"Sequence \"list.SequenceEqual(list.OrderBy(Temp => Temp.Job))\" is equal: {sequence}");
             /* ===================================================================== */
 
             Console.ForegroundColor = ConsoleColor.White;

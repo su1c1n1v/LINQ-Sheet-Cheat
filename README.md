@@ -263,15 +263,15 @@ var takeWhile = list.TakeWhile(Temp => Temp.Id < 3);
 
 - First get the first element in the list
 ```C#
+//Return the first element with any paraments
 Users first = list.First();
-Console.WriteLine($"Return the first element in the list: {first}");               
 ```
 
 - FirstOrDefault get the first element in the list but if dont fould anything
 return null
 ```C#
+//Return the first element with the argument "Temp => Temp.Name == "hello""
 first = list.FirstOrDefault(Temp => Temp.Name == "hello");
-Console.WriteLine($"Return the first \"Temp => Temp.Name == \"hello\"\" or null: null");
               
 ```
 <p align="center">
@@ -282,17 +282,16 @@ Console.WriteLine($"Return the first \"Temp => Temp.Name == \"hello\"\" or null:
 
 - Last get the last element in the list
 ```C#
+\\Return the last element with any paraments
  Users last = list.Last();
-Console.WriteLine($"Return the last element in the list: {last}");
 ```
 
 - LastOrDefault get the last element in the list but if dont fould anything
 return null
 
 ```C#
+//Return the last element with the parament "Temp => Temp.Name == "hello""
 last = list.LastOrDefault(Temp => Temp.Name == "hello");
-Console.WriteLine($"Return the last \"Temp => Temp.Name == \"hello\"\" or null: null");
-             
 ```
 <p align="center">
     <img width="70%" src="https://github.com/ved-suiciniv/Sheet-Cheat-LINQ/raw/master/img/img23.png"> 
